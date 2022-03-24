@@ -26,7 +26,8 @@ conda env create -f environment.yml
 
 ## To colorize
 
-* Download Pretrained Weights from [releases](https://github.com/alcros33/SketchColorizaion/releases/tag/pretrained_weights), and put `colorizer.pkl` into the [models/](models/) folder.
+* Download Pretrained Weights, `colorizer.pkl`, from [releases](https://github.com/alcros33/SketchColorizaion/releases/tag/pretrained_weights), and put into the [models/](models/) folder.
+* Then run the following script to colorize
 ```Shell
 python colorize.py sketchimage colorhintimage --savename path/to/save.jpg
 ```
@@ -36,10 +37,10 @@ python colorize.py sketchimage colorhintimage --savename path/to/save.jpg
 You can train using any sketch and color pair dataset, but [danbooru2021](https://www.gwern.net/Danbooru2021) was used to train this model. Instructions to download and clean the dataset are included in the file [DownloadAndClean.ipynb](DownloadAndClean.ipynb).
 
 ### Generate artificial linearts
-To generate linearts from the color images to train the model you can use the notebook [LA/toLA.ipynb](LA/toLA.ipynb) in which there are 4 methods available [sketch_keras](https://github.com/higumax/sketchKeras-pytorch), [sketch_simplification](https://github.com/bobbens/sketch_simplification), [anime2sketch](https://github.com/Mukosame/Anime2Sketch) and XDOG. For the CNN methods, you must download the pretrained weights for each one [releases](https://github.com/alcros33/SketchColorizaion/releases/tag/pretrained_weights).
+To generate linearts from the color images to train the model you can use the notebook [LA/toLA.ipynb](LA/toLA.ipynb) in which there are 4 methods available [sketch_keras](https://github.com/higumax/sketchKeras-pytorch), [sketch_simplification](https://github.com/bobbens/sketch_simplification), [anime2sketch](https://github.com/Mukosame/Anime2Sketch) and XDOG. For the CNN methods, you must download the pretrained weights for model on the [releases](https://github.com/alcros33/SketchColorizaion/releases/tag/pretrained_weights).
 
 ### Run training
-Follow the [Train.ipynb](Train.ipynb) notebook.
+Follow the [Train.ipynb](Train.ipynb) notebook. You must download the pretrained weights for the custom vgg in order to use perceptual loss. Download the `xyv_vgg.pth` from [releases](https://github.com/alcros33/SketchColorizaion/releases/tag/pretrained_weights) and place it into the [models/](models/) folder.
 
 ## More Results
 ![more_results](examples/more_results.jpg)
