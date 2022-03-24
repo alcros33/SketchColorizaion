@@ -1,0 +1,14 @@
+name: SketchColorization
+channels:
+  - pytorch
+  - fastai
+  - conda-forge
+dependencies:
+  - python=3.8.8
+  - pytorch=1.7.1
+  - torchvision=0.8.2
+  - fastai=2.3.0
+  - cudatoolkit=11.0.221
+  - pip
+  - pip:
+    - opencv-python==4.5.2.52
