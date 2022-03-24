@@ -42,4 +42,4 @@ To generate linearts from the color images to train the model you can use the no
 Follow the [Train.ipynb](Train.ipynb) notebook.
 
 ## More Results
-![more_results](examples/more_results.png)
+![more_results](examples/more_results.jpg)
